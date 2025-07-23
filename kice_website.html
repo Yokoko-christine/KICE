@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KICE - Kenal Initiative for Community Empowerment</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      line-height: 1.6;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    nav {
+      background-color: #1b5e20;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .carousel {
+      max-width: 1000px;
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .slides {
+      display: flex;
+      transition: transform 20s ease-in-out;
+      width: 300%;
+    }
+    .slides img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      background-color: white;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    .section-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      .slides img {
+        height: 250px;
+      }
+      section {
+        padding: 20px 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 20px;
+      }
+      nav a {
+        padding: 6px 10px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KENAL INITIATIVE FOR COMMUNITY EMPOWERMENT (KICE)</h1>
+    <p>Giving Priority to Humanity</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="#location">Location</a>
+  </nav>
+
+  <div class="carousel">
+    <div class="slides" id="slideContainer">
+      <img src="image/image2.png" alt="Slide 1">
+      <img src="image/image4.png" alt="Slide 2">
+      <img src="image/image.jpg" alt="Slide 3">
+    </div>
+  </div>
+
+  <section id="home">
+    <h2>Welcome to KICE</h2>
+    <p>We are an NGO in cooperated and Limited by liability  with a slogan to give priority to Humanity. we have thematic areas in Environmental Governance to protect and conserve nature, child protection, Women protection and empowerment, General protection, Water Sanitation and Hygiene(WASH) Mental Health, General health, Financial inclusion, Education and Agricultural innovations.</p>
+    <img src="image/image.jpg" alt="Community Work" class="section-img">
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Kenal Initiative for Community Empowerment (KICE) was founded with the goal of transforming communities through locally driven solutions. We believe that sustainable development is achieved through inclusive participation, innovation, and shared responsibility.</p>
+    <img src="image/image.jpg" alt="Teamwork" class="section-img">
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <p>Our key community-focused products include:</p>
+    <ul>
+      <li>Eco-friendly farming tools</li>
+      <li>Educational materials for rural schools</li>
+      <li>Solar-powered household kits</li>
+    </ul>
+    <img src="image/image.jpg" alt="Products" class="section-img">
+  </section>
+
+  <section id="services">
+    <h2>Our Services & Thematic Areas</h2>
+    <ul>
+      <li><strong>Environment Governance</strong></li>
+      <li><strong>Protection</strong></li>
+      <li><strong>Public Health</strong></li>
+      <li><strong>Agriculture Innovation</strong></li>
+      <li><strong>Financial Inclusion and VSLA</strong></li>
+      <li><strong>Energy</strong></li>
+      <li><strong>Education</strong></li>
+    </ul>
+    <img src="image/image.jpg" alt="Services" class="section-img">
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@kice-initiative.org</p>
+    <p>Phone: +256 700 123456</p>
+    <p>Facebook: <a href="#">facebook.com/kice</a></p>
+  </section>
+
+  <section id="location">
+    <h2>Our Location</h2>
+    <p>We are located in Uganda, serving multiple rural communities across various districts. Visit us or reach out to collaborate!</p>
+    <p><strong>Head Office:</strong> Plot 12, Green Road, Arua, Uganda</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 KENAL INITIATIVE FOR COMMUNITY EMPOWERMENT. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Carousel Slider
+    let currentIndex = 0;
+    const slides = document.getElementById('slideContainer');
+    const totalSlides = slides.children.length;
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }, 3000);
+
+    // Log Navigation
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        console.log('Navigated to:', link.getAttribute('href'));
+      });
+    });
+  </script>
+</body>
+</html>
